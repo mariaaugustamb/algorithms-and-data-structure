@@ -42,9 +42,24 @@ class Stack{
     printStack(){ //prints the stack
         for(let i = 0; i < this.count; i++){
             console.log(this.items[i]);
-        }
-        
+        }        
     }
+
+    toStringStack(){
+        let objString = '';
+        if(!this.isEmptyStack()){
+            for (let i = 0; i < this.count; i++){
+                if(i === this.count-1){
+                    objString += this.items[i];
+                    return objString;
+                }else{
+                    objString += this.items[i] + ', ';
+                }
+            }
+        }
+
+        return objString;
+    }    
 
 }
 
@@ -59,6 +74,8 @@ stack.pushStack(6);
 stack.printStack();
 
 console.log(stack.isEmptyStack());
+
+console.log(stack.toStringStack());
 
 stack.popStack();
 stack.printStack();
