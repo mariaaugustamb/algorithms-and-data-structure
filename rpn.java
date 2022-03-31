@@ -10,7 +10,7 @@ public class rpn {
         Scanner in = new Scanner(System.in);
         Stack<Double> stack = new Stack<Double>();
 
-        try (BufferedReader br = Files.newBufferedReader(Paths.get("myStack.stk"))) {
+        try (BufferedReader br = Files.newBufferedReader(Paths.get("Calc1.stk"))) {
             String exp;
             while ((exp = br.readLine()) != null) {
 
